@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = { "com.sweet_cake.controller" })
+@ComponentScan(basePackages = { "com.sweet_cake" })
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Override
