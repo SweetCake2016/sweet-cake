@@ -16,7 +16,7 @@ public class HomeController
 	/**
 	 * Request mapping for user
 	 */
-	@RequestMapping(value = "users", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView getUsersView() {
 		List<User> users = new ArrayList<User>();
 		User userIvan = new User();
@@ -25,7 +25,7 @@ public class HomeController
 		userIvan.setFamilyName("Milosavljevic");
 		userIvan.setEmail("test@test.com");
 		users.add(userIvan);
-		ModelAndView mv = new ModelAndView("users");
+		ModelAndView mv = new ModelAndView("welcome");
 		mv.addObject("usersModel", users);
 		return mv;
 	}
