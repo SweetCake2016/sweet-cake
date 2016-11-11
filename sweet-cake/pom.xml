@@ -1,17 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.sweetcake</groupId>
   <artifactId>sweetcake</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-
-  <name>sweet-cake</name>
+  <name>sweetCakeApp</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+	<spring.version>4.3.3.RELEASE</spring.version>
+	<jstl.version>1.2</jstl.version>
+	<servletapi.version>3.0.1</servletapi.version>
   </properties>
 
   <dependencies>
@@ -25,7 +27,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>4.3.3.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
 	<dependency>
@@ -55,7 +57,7 @@
 	<dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
-      <version>1.2</version>
+      <version>${jstl.version}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/cglib/cglib -->
 	<dependency>
@@ -67,7 +69,7 @@
 	<dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.0.1</version>
+      <version>${servletapi.version}</version>
 	</dependency>
 	<dependency>
       <groupId>commons-fileupload</groupId>
@@ -90,8 +92,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
                 </configuration>
             </plugin>
 	   </plugins>
