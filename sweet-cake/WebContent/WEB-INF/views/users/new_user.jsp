@@ -38,6 +38,11 @@
 	  <label for="email">Email:</label>
 	  <form:input path="email" class="form-control" placeholder="Example input"/>
 	  </div>
+	  
+	  <div class="form-group">
+	  <label for="image">Image:</label>
+	  <form:input type="file" path="image" class="form-control" placeholder="Example input" size="50"/>
+	  </div>
 	  		
 	  		  <td><input type="submit" value="Save"/></td> 
 	  </form:form>

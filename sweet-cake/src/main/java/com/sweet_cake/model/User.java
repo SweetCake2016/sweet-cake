@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 /**
@@ -27,6 +28,10 @@ public class User {
 	
 	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "image")
+	@Lob
+	private byte[] image;
 
 	public Integer getId() {
 		return id;
@@ -60,4 +65,11 @@ public class User {
 		this.email = email;
 	}
 
+    public byte[] getImage() {
+        return image;
+    }
+ 
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 }
