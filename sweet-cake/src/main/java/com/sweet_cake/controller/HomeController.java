@@ -1,9 +1,7 @@
 package com.sweet_cake.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController 
@@ -11,9 +9,8 @@ public class HomeController
 	/**
 	 * Request mapping for user
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView getUsersView() {
-		ModelAndView mv = new ModelAndView("welcome");
-		return mv;
+	@GetMapping(value = "/")
+	public String getUsersView() {
+		return "welcome";
 	}
 }
