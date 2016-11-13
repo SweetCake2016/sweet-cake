@@ -4,27 +4,19 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.sweet_cake.config.MvcConfig;
+import com.sweet_cake.config.AppConfig;
 
 public class WebAppInitializer implements WebApplicationInitializer {
 
 	@Override
 	public void onStartup(ServletContext container) {
-		// Create the 'root' Spring application context
-//		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-		// rootContext.register(ServiceConfig.class, JPAConfig.class,
-		// SecurityConfig.class);
-
-		// Manage the lifecycle of the root application context
-//		container.addListener(new ContextLoaderListener(rootContext));
 
 		// Create the dispatcher servlet's Spring application context
 		AnnotationConfigWebApplicationContext dispatcherServlet = new AnnotationConfigWebApplicationContext();
-		dispatcherServlet.register(MvcConfig.class);
+		dispatcherServlet.register(AppConfig.class);
 		dispatcherServlet.setServletContext(container);
 
 		// Register and map the dispatcher servlet
@@ -34,5 +26,5 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		dispatcher.addMapping("/");
 
 	}
-	
+
 }
