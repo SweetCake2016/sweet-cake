@@ -6,6 +6,15 @@
 
 <head>
   <title>Users</title>
+  
+  <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href='<c:url value="/resources/css/bootstrap.min.css" />' />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href='<c:url value="/resources/css/style.css" />'/>
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href='<c:url value="/resources/font-awesome-4.4.0/css/font-awesome.min.css"/> ' />
 </head>
 
 <body>
@@ -13,8 +22,8 @@
 	<h2>List of users:</h2>
 
 	<div id="container">
-	<table>
-	  <tr>
+	<table  class="table table-inverse">
+	  <tr class="bg-primary">
 	  	<th>First name</th>
 	  	<th>Last name</th>
 	  	<th>Email name</th>

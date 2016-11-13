@@ -7,6 +7,16 @@
 
 <head>
   <title>New User</title>
+  
+  <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href='<c:url value="/resources/css/bootstrap.min.css" />' />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href='<c:url value="/resources/css/style.css" />'/>
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href='<c:url value="/resources/font-awesome-4.4.0/css/font-awesome.min.css"/> ' />
+	
 </head>
 
 <body>
@@ -16,27 +26,20 @@
 	<div id="container">
 	  <form:form action="saveUser" modelAttribute="user" method="POST">
 	  
-	  <table>
-	  	<tbody>
-	  		<tr>
-	  		 <td><label>First name:</label></td>
-	  		 <td><form:input path="firstName"/></td> 
-	  		 </tr>
-	  		 <tr>
-	  		 <td><label>Last name:</label></td>
-	  		 <td><form:input path="familyName"/></td> 
-	  		 </tr>
-	  		 <tr>
-	  		 <td><label>Email:</label></td>
-	  		 <td><form:input path="email"/></td> 
-	  		</tr>
+	  <div class="form-group">
+	  <label for="firstName">First name:</label>
+	  <form:input path="firstName" class="form-control" placeholder="Example input"/>
+	  </div>
+	  <div class="form-group">
+	  <label for="lastName">Last name:</label>
+	  <form:input path="familyName" class="form-control" placeholder="Example input"/>
+	  </div>
+	   <div class="form-group">
+	  <label for="email">Email:</label>
+	  <form:input path="email" class="form-control" placeholder="Example input"/>
+	  </div>
 	  		
-	  		<tr>
-	  		  <td><label></label></td>
 	  		  <td><input type="submit" value="Save"/></td> 
-	  		</tr>
-	  	</tbody>
-	  </table>
 	  </form:form>
 	  
 	  <a href='<c:url value="/users/list" />'>Back to the list</a>
