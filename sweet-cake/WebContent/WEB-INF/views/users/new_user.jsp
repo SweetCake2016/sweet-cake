@@ -37,8 +37,9 @@
 	  		</tr>
 	  	</tbody>
 	  </table>
-	  
 	  </form:form>
+	  
+	  <a href='<c:url value="/users/list" />'>Back to the list</a>
 	
 	</div>
 
