@@ -12,4 +12,6 @@ public interface UsersService {
 
 	List<User> getAllUsers();
 	void save(User user);
+	User getUser(Integer id);
+	void updateUser(User user);
 }

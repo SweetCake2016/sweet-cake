@@ -34,4 +34,16 @@ public class UsersServiceImpl implements UsersService {
 		usersRepository.save(user);
 	}
 
+	@Override
+	@Transactional
+	public User getUser(Integer id) {
+		return usersRepository.findOne(id);
+	}
+
+	@Override
+	@Transactional
+	public void updateUser(User user) {
+		usersRepository.updateUser(user.getId(), user.getFirstName());
+	}
+
 }

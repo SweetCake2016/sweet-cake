@@ -27,13 +27,20 @@
 	  	<th>First name</th>
 	  	<th>Last name</th>
 	  	<th>Email name</th>
+	  	<th>Action</th>
 	  </tr>
 	  
+	  
 	  <c:forEach var="currentUser" items="${users}">
+	  
+	  <c:url value="/users/showFormForUpdate" var="updateLink">
+   		<c:param name="userId" value="${currentUser.id}"/>
+   	  </c:url>
 	   <tr>
 	     <td> ${currentUser.firstName} </td>
 	     <td> ${currentUser.familyName} </td>
 	     <td> ${currentUser.email} </td>
+	     <td><a href="${updateLink}" class="glyphicon glyphicon-pencil"></a><td>
 	   </tr>
 	  </c:forEach>
 	</table>
