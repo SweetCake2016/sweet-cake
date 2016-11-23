@@ -37,7 +37,7 @@
    		<c:param name="userId" value="${currentUser.id}"/>
    	  </c:url>
    	  
-   	  <c:url value="" var="deleteLink">
+   	  <c:url value="/users/deleteUser" var="deleteLink">
    		<c:param name="userId" value="${currentUser.id}"/>
    	  </c:url>
    	  
