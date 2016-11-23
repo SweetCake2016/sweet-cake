@@ -69,4 +69,10 @@ public class UsersController {
 		
 		return "redirect:/users/list";
 	}
+	public String deleteUser(@ModelAttribute("user") User user) {
+		
+		usersService.delete(user);
+		
+		return "redirect:/users/list";
+	}
 }

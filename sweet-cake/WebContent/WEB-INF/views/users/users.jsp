@@ -36,11 +36,16 @@
 	  <c:url value="/users/showFormForUpdate" var="updateLink">
    		<c:param name="userId" value="${currentUser.id}"/>
    	  </c:url>
+   	  
+   	  <c:url value="" var="deleteLink">
+   		<c:param name="userId" value="${currentUser.id}"/>
+   	  </c:url>
+   	  
 	   <tr>
 	     <td> ${currentUser.firstName} </td>
 	     <td> ${currentUser.familyName} </td>
 	     <td> ${currentUser.email} </td>
-	     <td><a href="${updateLink}" class="glyphicon glyphicon-pencil"></a><td>
+	     <td><a href="${updateLink}" class="glyphicon glyphicon-pencil"></a>&nbsp;&nbsp; <a href="${deleteLink}" class="glyphicon glyphicon-remove"></a><td>
 	   </tr>
 	  </c:forEach>
 	</table>
