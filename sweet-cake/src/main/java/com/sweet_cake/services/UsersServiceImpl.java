@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import com.sweet_cake.model.User;
 import com.sweet_cake.repository.UsersRepository;
 
@@ -46,4 +47,12 @@ public class UsersServiceImpl implements UsersService {
 		usersRepository.updateUser(user.getId(), user.getFirstName());
 	}
 
+	@Override
+	@Transactional
+	public void delete(User user) {
+		usersRepository.delete(user);
+	}
+
+
+	
 }
