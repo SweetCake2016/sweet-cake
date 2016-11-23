@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="http://www.danebsoft.com">
 
-	<title>SweetCake</title>
+	<title><spring:message code="appname"/></title>
   
 	<!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href='<c:url value="/resources/css/bootstrap.min.css" />' />
@@ -71,6 +71,15 @@
                     <li>
                         <a class="page-scroll" href="contact.html">Contact</a>
                     </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Language
+                        <span class="caret"></span>
+                      </a>
+      				  <ul class="dropdown-menu" role="menu">
+        			    <li><a href="?lang=en">English</a></li>
+        			    <li><a href="?lang=sr">Serbish</a></li>
+      				  </ul>
+      				</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -139,7 +148,7 @@
 			<div class="container">
 				<div class="heading">
 					<h2>
-						<span class="hr">Welcome!</span>
+						<span class="hr"><spring:message code="dashboard.welcome"/></span>
 					</h2>
 					<div class="intro">Nulla hendrerit risus auctor, sodales lacus in, facilisis enim. Curabitur iaculis lacus leo,<br/> ut consequat tellus posuere vel.</div>
 				</div>
